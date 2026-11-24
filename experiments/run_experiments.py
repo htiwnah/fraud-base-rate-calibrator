@@ -37,7 +37,9 @@ def run_all_experiments(repo_root: Path | None = None) -> dict[str, object]:
         "f1_score": full.f1_score,
         "resolution_floor_pct": full.resolution_floor_pct,
     }
-    (out_dir / "exp1_base_rate.json").write_text(json.dumps(exp1, indent=2) + "\n", encoding="utf-8")
+    (out_dir / "exp1_base_rate.json").write_text(
+        json.dumps(exp1, indent=2) + "\n", encoding="utf-8"
+    )
 
     exp2 = {
         "rows": [

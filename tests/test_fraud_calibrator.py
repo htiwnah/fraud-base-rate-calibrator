@@ -93,7 +93,10 @@ class TestFraudProperties(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             oj = Path(tmp) / "o.json"
             self.assertEqual(
-                cli_main(["calibrate", "--fixture", str(FIX), "--policy", str(POL), "--out", str(oj)]),
+                cli_main([
+                    "calibrate", "--fixture", str(FIX),
+                    "--policy", str(POL), "--out", str(oj),
+                ]),
                 1,
             )
             pf = Path(tmp) / "p.json"

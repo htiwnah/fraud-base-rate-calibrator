@@ -37,4 +37,6 @@ class TestThresholdSweepProperties(unittest.TestCase):
     def test_deterministic_across_repeated_runs(self) -> None:
         items = load_transactions(FIX)
         pol = FraudPolicy()
-        self.assertEqual(calibrate_alerts(items, pol).to_dict(), calibrate_alerts(items, pol).to_dict())
+        d1 = calibrate_alerts(items, pol).to_dict()
+        d2 = calibrate_alerts(items, pol).to_dict()
+        self.assertEqual(d1, d2)
