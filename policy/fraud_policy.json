@@ -1,0 +1,6 @@
+{
+  "policy_version": "1.0",
+  "score_threshold": 0.7,
+  "max_allowed_false_positives": 0,
+  "fixture_path": "fixtures/fraud_scores.jsonl"
+}
