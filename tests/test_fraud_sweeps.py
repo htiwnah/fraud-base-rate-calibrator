@@ -40,3 +40,19 @@ class TestThresholdSweepProperties(unittest.TestCase):
         d1 = calibrate_alerts(items, pol).to_dict()
         d2 = calibrate_alerts(items, pol).to_dict()
         self.assertEqual(d1, d2)
+
+
+class TestParametricThresholds(unittest.TestCase):
+    pass
+
+
+def _bind_th(idx: int, th: float) -> None:
+    def _t(self: unittest.TestCase) -> None:
+        s = calibrate_alerts(load_transactions(FIX), FraudPolicy(score_threshold=th))
+        self.assertEqual(s.total_transactions, 50)
+        self.assertGreaterEqual(s.roc_auc, 0.90)
+    setattr(TestParametricThresholds, f"test_threshold_sweep_{idx:02d}", _t)
+
+
+for _i, _th in enumerate((0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95)):
+    _bind_th(_i, _th)
