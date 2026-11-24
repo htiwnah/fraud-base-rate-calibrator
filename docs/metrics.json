@@ -1,0 +1,61 @@
+{
+  "metrics": {
+    "tests_total": 62,
+    "tests_passed": true,
+    "coverage_line_pct": 99.25,
+    "total_transactions": 50,
+    "base_rate_pct": 8.0,
+    "roc_auc": 0.9674,
+    "false_positives": 6,
+    "true_positives": 3,
+    "precision": 0.3333,
+    "recall": 0.75,
+    "f1_score": 0.4615,
+    "resolution_floor_pct": 2.0
+  },
+  "anchors": {
+    "tests_total": [
+      "{} tests"
+    ],
+    "coverage_line_pct": [
+      "{}% line coverage"
+    ],
+    "total_transactions": [
+      "{} evaluated transactions"
+    ],
+    "base_rate_pct": [
+      "{}% base rate"
+    ],
+    "roc_auc": [
+      "{} roc-auc"
+    ],
+    "false_positives": [
+      "{} false positives"
+    ],
+    "true_positives": [
+      "{} true positives"
+    ],
+    "precision": [
+      "{} precision"
+    ],
+    "recall": [
+      "{} recall"
+    ],
+    "f1_score": [
+      "{} f1 score"
+    ],
+    "resolution_floor_pct": [
+      "{}% resolution floor"
+    ]
+  },
+  "checked_documents": [
+    "README.md",
+    "CHANGELOG.md",
+    "docs/adr/ADR-001-precision-alongside-roc-auc.md",
+    "docs/adr/ADR-002-explicit-three-way-exit-codes.md",
+    "docs/adr/ADR-003-stdlib-core-and-python312-ci.md",
+    "docs/adr/ADR-004-validate-score-bounds.md",
+    "docs/adr/ADR-005-base-rate-boundaries.md"
+  ],
+  "note": "Every value here is produced by running tests and offline experiments."
+}

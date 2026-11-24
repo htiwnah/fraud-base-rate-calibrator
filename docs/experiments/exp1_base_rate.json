@@ -1,0 +1,13 @@
+{
+  "total_transactions": 50,
+  "actual_fraud_count": 4,
+  "base_rate_pct": 8.0,
+  "roc_auc": 0.9674,
+  "true_positives": 3,
+  "false_positives": 6,
+  "false_negatives": 1,
+  "precision": 0.3333,
+  "recall": 0.75,
+  "f1_score": 0.4615,
+  "resolution_floor_pct": 2.0
+}
